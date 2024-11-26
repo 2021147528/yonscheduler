@@ -1,0 +1,362 @@
+body {
+    /*the entire background*/
+    background-color: antiquewhite;
+    /*make entire content center aligned*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*header*/
+
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 40pt;
+    background-color: rgb(191, 175, 175);
+}
+
+header>h1 {
+    width: 100%;
+    padding: 20px;
+    height: fit-content;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#title {
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(150, 198, 171);
+    color: white;
+}
+
+
+/*apply animation*/
+
+header>h1 {
+    animation-name: moving_header;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    animation-duration: 2s;
+}
+
+@keyframes moving_header {
+    0% {
+        right: 60px;
+        position: relative;
+    }
+    100% {
+        right: 0px;
+        position: relative;
+    }
+}
+
+
+/*top navigation*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav>ul>input {
+    background-color: beige;
+    border: 6px solid rgb(212, 212, 238);
+    border-radius: 20px;
+    width: 300px;
+    height: 80px;
+    margin: 20px;
+    padding: 10px;
+    color: black;
+    font-size: 2em;
+}
+
+nav>ul>input:hover {
+    background-color: rgb(150, 198, 171);
+    color: aliceblue;
+}
+
+
+/*main content*/
+
+body>h1 {
+    background: rgb(247, 237, 225);
+    padding: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    /*border*/
+    border-radius: 20px;
+    border-width: 4px;
+    border-color: rgb(187, 187, 187);
+    border-style: solid;
+    /*remove bottom border*/
+    border-bottom-style: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    /*text*/
+    text-align: center;
+    color: rgb(65, 65, 65);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+body>h2 {
+    background: rgb(247, 237, 225);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /*border*/
+    border-width: 4px;
+    border-color: rgb(187, 187, 187);
+    border-style: solid;
+    /*remove top and bottom border*/
+    border-top-style: none;
+    border-bottom-style: none;
+    /*text*/
+    text-align: center;
+    color: rgb(140, 140, 140);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+}
+
+body>form {
+    background: rgb(247, 237, 225);
+    padding: 0px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    /*border*/
+    border-width: 4px;
+    border-color: rgb(187, 187, 187);
+    border-style: solid;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /*thinner top border*/
+    border-top-width: 2px;
+    /*text*/
+    text-align: center;
+    color: rgb(114, 114, 114);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
+
+body>form>p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0px;
+    font-size: 30pt;
+}
+
+#credits-per-semester {
+    font-size: 30pt;
+}
+
+
+/*first and second box "완료" 버튼과 입력 칸*/
+
+body>form>input {
+    background-color: beige;
+    border: 6px solid rgb(212, 212, 238);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+    color: rgb(97, 97, 97);
+    font-size: 2em;
+}
+
+body>form>input[class="button"] {
+    width: 160px;
+}
+
+body>form>input[class="button"]:hover {
+    background-color: rgb(150, 198, 171);
+    color: aliceblue;
+}
+
+
+/*second box*/
+
+body>form>p>label>input {
+    background-color: beige;
+    border: 6px solid rgb(212, 212, 238);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+    color: rgb(97, 97, 97);
+    font-size: 1em;
+}
+
+#credits-per-semester {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    border-width: 0px;
+    border-top-width: 1.2px;
+    border-bottom-width: 1.2px;
+    border-style: solid;
+    border-color: rgb(187, 187, 187);
+}
+
+
+/*time table*/
+
+body>#timetable {
+    background: rgb(247, 237, 225);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    /*border*/
+    border-width: 4px;
+    border-color: rgb(187, 187, 187);
+    border-style: solid;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /*remove top and bottom border*/
+    border-top-style: none;
+    border-bottom-style: none;
+    /*text*/
+    color: rgb(140, 140, 140);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+}
+
+thead,
+th {
+    border: 4px solid;
+    border-color: rgb(187, 187, 187);
+}
+
+
+/*buttons "컴퓨터과학과 전공 과목 추가", "기타 과목 추가"*/
+
+button {
+    background-color: beige;
+    border: 6px solid rgb(212, 212, 238);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+    color: rgb(97, 97, 97);
+    font-size: 2em;
+}
+
+button:hover {
+    background-color: rgb(150, 198, 171);
+    color: aliceblue;
+}
+
+
+/*panels*/
+
+#cs-panel,
+#others-panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+#cs-panel>form {
+    background: rgb(238, 228, 216);
+    margin: 40px;
+    margin-bottom: 0px;
+    /*border*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-width: 4px;
+    border-color: rgb(191, 182, 172);
+    border-style: solid;
+    border-bottom-style: none;
+    /*text*/
+    text-align: center;
+    color: rgb(114, 114, 114);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30pt;
+}
+
+#cs-panel>div {
+    background: rgb(238, 228, 216);
+    margin: 40px;
+    margin-top: 0px;
+    padding: 40px;
+    /*border*/
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-width: 4px;
+    border-color: rgb(187, 187, 187);
+    border-style: solid;
+    /*thinner top border*/
+    border-top-width: 2px;
+    /*text*/
+    text-align: center;
+    color: rgb(70, 70, 70);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30pt;
+}
+
+#others-panel>form {
+    background: rgb(238, 228, 216);
+    margin: 40px;
+    /*border*/
+    border-radius: 20px;
+    border-width: 4px;
+    border-color: rgb(191, 182, 172);
+    border-style: solid;
+    /*text*/
+    text-align: center;
+    color: rgb(114, 114, 114);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30pt;
+}
+
+
+/*making text boxes bigger in the panels*/
+
+#cs-panel>form>p>label>input,
+#others-panel>form>p>label>input {
+    background-color: beige;
+    border: 6px solid rgb(212, 212, 238);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+    color: rgb(97, 97, 97);
+    font-size: 1em;
+}
+
+
+/*이 과목 추가하기 버튼*/
+
+#cs-panel>form>input,
+#others-panel>form>input {
+    background-color: beige;
+    border: 6px solid rgb(212, 212, 238);
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+    color: rgb(97, 97, 97);
+    font-size: 1em;
+}
+
+#cs-panel>form>input:hover,
+#others-panel>form>input:hover {
+    background-color: rgb(150, 198, 171);
+    color: aliceblue;
+}
+
+
+/*성공확률 숫자*/
+
+#cs-panel>div>span {
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(150, 198, 171);
+    color: white;
+    margin: 10px;
+}
